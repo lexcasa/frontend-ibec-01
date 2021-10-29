@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <!-- Componente buscador -->
+            <div>
+                <input type="text" id="cedula">
+                <button onclick="buscarPersona()">Buscar</button>
+            </div>
+            <hr>
+            <!-- Componente formulario -->
+            <div style="display: none;">
+                <form action="">
+                    <h2>Ingresar persona</h2>
+                    <input type="text" placeholder="Nombre">
+                    <br>
+                    <input type="text" placeholder="Cedula">
+                    <br>
+                    <button type="button">Guardar</button>
+                </form>
+                <hr>
+            </div>
+            <!-- Tabla de usuarios encontrado -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cedula</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <script src="persona.service.js"></script>
+        <script src="app.controller.js"></script>
+    </body>
+</html>

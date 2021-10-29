@@ -1,0 +1,19 @@
+PROBLEMA
+ - Buscador de persona por cédula
+ - Si no existe la persona entonces la ingresa
+
+1. VIEW
+
+    Tres componentes HTML
+        1. Buscador: input, boton
+        2. Formulario: campos del modelo de persona
+            - nombre
+            - cedula
+        3. Tabla donde lista el usuario que se encontro
+
+2. LOGICA
+    Servicio: 
+        - Buscar persona
+        - Agregar persona
+
+3. INTEGRACION
