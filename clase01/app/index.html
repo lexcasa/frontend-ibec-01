@@ -9,19 +9,19 @@
             </div>
             <hr>
             <!-- Componente formulario -->
-            <div style="display: none;">
+            <div style="display: none;" id="form">
                 <form action="">
                     <h2>Ingresar persona</h2>
-                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Nombre" id="nombre">
                     <br>
-                    <input type="text" placeholder="Cedula">
+                    <input type="text" placeholder="Cedula" id="cedula">
                     <br>
-                    <button type="button">Guardar</button>
+                    <button type="button" onclick="guardaPersona()">Guardar</button>
                 </form>
                 <hr>
             </div>
             <!-- Tabla de usuarios encontrado -->
-            <table>
+            <table style="display: none;">
                 <thead>
                     <tr>
                         <th>Nombre</th>

@@ -12,6 +12,25 @@ const buscarPersona = function (){
             </tr>
         `
         tbody.innerHTML = tpl
+        document.querySelector("#form").style.display = "none"
+        document.querySelector("table").style.display = "block"
+        return
     }
-    console.log("buscar persona :: ", persona)
+
+    document.querySelector("#form").style.display = "block"
+    document.querySelector("table").style.display = "none"
+}
+
+const guardaPersona = function (){
+    let persona = {
+        nombre: "",
+        cedula: ""
+    }
+    persona.nombre = document.querySelector("form #nombre").value
+    persona.cedula = document.querySelector("form #cedula").value
+
+    if(persona.cedula !== ""){
+        let personas = PersonaService(pers).nuevaPersona(persona)
+        console.log(personas)
+    }
 }
