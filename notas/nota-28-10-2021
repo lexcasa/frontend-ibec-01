@@ -50,3 +50,10 @@ DOS FORMAS DE MANIPULACION DE ETIQUETAS
     -> Si tengo una etiqueta "input"
         -> document.querySelector("input").value
         ...
+
+EJERCIOS RAPIDOS
+
+1. Crear una pull request de main -> mi rama
+2. No ingresar personas que tengan la misma cédula
+3. Cuando busco una cédula que no existe, agregar esa cédula en el campo #cedula del formulario
+4. Al guardar una persona nueva, reiniciar los campos a vacio
