@@ -1,0 +1,59 @@
+PRE REQUISITOS
+- Instalar NodeJS
+    -> Verificar que node este instalado
+    -> Ejecuto: npm -v 
+    -> Ejecuto: node -v
+- Instalar un http server
+    -> Ejecuto: npm i -g http-server
+    -> Para windows ejecutar el siguiente comando
+        -> Set-ExecutionPolicy RemoteSigned
+    -> Ejecutar: http-server -p 8080 -c-1
+        -> En la raiz del proyecto
+- Ingresar en el navegador la URL: http://localhost:8080
+
+PROBLEMA
+ - Buscador de persona por cédula
+ - Si no existe la persona entonces la ingresa
+
+
+MANIPULACION DEL DOM
+
+-> document como objeto dentro del js que es el HTML mapeado en nodos
+    -> para acceder a los nodos utilizo dos funciones generales
+        -> document.querySelector("selector")
+        -> document.querySelectorAll("selector")
+    -> Donde el "selector" es la notación CSS del elemento HTML
+        -> "p" (etiqueta)
+        -> ".nombre" (clase)
+        -> "#unico" (id)
+    -> El querySelector devuelve un objeto mientras que el querySelectorAll devuelve un array
+
+DOS TIPOS DE ETIQUETA
+    -> De estructura
+        -> Pueden contener a si mismas o una jerarquia igual o inferior
+            -> div
+                div
+            -> div 
+                p
+    -> De lectura/escritura
+        -> Donde no pueden contener otras etiquetas sino que atributos polivaluados
+
+
+DOS FORMAS DE MANIPULACION DE ETIQUETAS
+
+    -> Si tengo una etiqueta "p"
+        -> document.querySelector("p").innerText
+        -> document.querySelector("p").innerHTML
+        -> document.querySelector("p").outerHTML
+        ...
+
+    -> Si tengo una etiqueta "input"
+        -> document.querySelector("input").value
+        ...
+
+EJERCIOS RAPIDOS
+
+1. Crear una pull request de main -> mi rama
+2. No ingresar personas que tengan la misma cédula
+3. Cuando busco una cédula que no existe, agregar esa cédula en el campo #cedula del formulario
+4. Al guardar una persona nueva, reiniciar los campos a vacio
