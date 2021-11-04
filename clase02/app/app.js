@@ -3,21 +3,27 @@ const app = new Vue({
     data: {
         titulo: "App en vue",
         cedula: '',
-        resultado: ''
+        persona: {}, 
+        personas: [
+            {
+                nombre: "Alex",
+                cedula: "123123"
+            },
+            {
+                nombre: "Juan",
+                cedula: "111111"
+            }
+        ]
     },
     methods: {
         buscarPersona: function (){
             console.log("cedula", this.cedula)
-            for (let i = 0; i < personas.length; i++) {
-                if (this.cedula === personas[i].cedulaPer) {
-                    this.resultado = this.cedula
+            for (let i = 0; i < this.personas.length; i++){
+                if(this.cedula == this.personas[i].cedula){
+                    this.persona = this.personas[i]
+                    break
                 }
             }
         }
     }
 })
-
-const personas = [
-    {nombre: 'Juan',
-    cedulaPer: '123'}
-]
