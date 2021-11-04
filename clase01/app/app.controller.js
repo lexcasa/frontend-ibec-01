@@ -17,6 +17,7 @@ const buscarPersona = function (){
         return
     }
 
+    document.querySelector("form #cedula").value = documento
     document.querySelector("#form").style.display = "block"
     document.querySelector("table").style.display = "none"
 }
@@ -44,6 +45,10 @@ const guardaPersona = function (){
 
     if(persona.cedula !== "" && chequearExistencia(persona.cedula)){
         let personas = PersonaService(pers).nuevaPersona(persona)
+        
+        document.querySelector("form #nombre").value = ""
+        document.querySelector("form #cedula").value = ""
+
         console.log(personas)
     }
 }

@@ -22,7 +22,10 @@ const PersonaService = function (personas){
             return false
         },
         nuevaPersona: function(persona){
-            personas.push(persona)
+            console.log("referencia:", this)
+            if(this.buscarPersona(persona.cedula) === false){
+                personas.push(persona)
+            }
             return personas
         }
     }
