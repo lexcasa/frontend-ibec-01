@@ -29,7 +29,20 @@ const guardaPersona = function (){
     persona.nombre = document.querySelector("form #nombre").value
     persona.cedula = document.querySelector("form #cedula").value
 
-    if(persona.cedula !== ""){
+    let chequearExistencia = function(cedulaIngresada) {
+        for (let i = 0; i < pers.length; i++) {
+            for (const cedula in pers) {
+                if (cedulaIngresada!=pers.cedula) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }   
+        }
+    }
+
+    if(persona.cedula !== "" && chequearExistencia(persona.cedula)){
         let personas = PersonaService(pers).nuevaPersona(persona)
         console.log(personas)
     }
