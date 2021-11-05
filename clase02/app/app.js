@@ -13,7 +13,8 @@ const app = new Vue({
                 nombre: "Juan",
                 cedula: "111111"
             }
-        ]
+        ],
+        formulario: ''
     },
     methods: {
         buscarPersona: function (){
@@ -22,6 +23,14 @@ const app = new Vue({
                 if(this.cedula == this.personas[i].cedula){
                     this.persona = this.personas[i]
                     break
+                }
+                else {
+                    this.formulario = 
+                    `<form>
+                        Nombre <input type="text">
+                        <br>
+                        Cedula <input type="text" value="${this.cedula}">
+                    </form>`
                 }
             }
         }
