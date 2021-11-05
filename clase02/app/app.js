@@ -3,7 +3,12 @@ const app = new Vue({
     data: {
         titulo: "App en vue",
         cedula: '',
-        persona: {}, 
+        persona: {},
+        newPersona: {
+            nombre: '',
+            cedula: ''
+        },
+        showForm: false,
         personas: [
             {
                 nombre: "Alex",
@@ -18,12 +23,26 @@ const app = new Vue({
     methods: {
         buscarPersona: function (){
             console.log("cedula", this.cedula)
+            let findPersona = false
             for (let i = 0; i < this.personas.length; i++){
                 if(this.cedula == this.personas[i].cedula){
                     this.persona = this.personas[i]
+                    findPersona = true
                     break
                 }
             }
+            if(!findPersona){
+                this.showForm = true 
+            }
+        },
+        nuevaPersona: function (){
+            this.personas.push( this.newPersona )
+            this.showForm = false
+            this.newPersona = {
+                nombre: '',
+                cedula: ''
+            }
+            console.log(this.personas)
         }
     }
 })
