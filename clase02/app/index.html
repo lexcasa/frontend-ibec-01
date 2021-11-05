@@ -10,6 +10,16 @@
                 <input type="text" v-model="cedula">
                 <button v-on:click="buscarPersona()">Buscar</button>
             </div>
+            <hr>
+            <div v-if="showForm">
+                <form action="">
+                    <input type="text" placeholder="Nombre" v-model="newPersona.nombre">
+                    <br>
+                    <input type="text" placeholder="Cedula" v-model="newPersona.cedula">
+                    <br>
+                    <button type="button" v-on:click="nuevaPersona()">Guardar</button>
+                </form>
+            </div>
             <div>
                 <p>{{persona.nombre}} {{persona.cedula}}</p>
             </div>
