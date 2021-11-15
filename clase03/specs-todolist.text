@@ -35,3 +35,8 @@ JS <--- { directivas: v-model, v-on:evento } <--- HTML
 
 Recorrido: 
 HTML ---> v-model ---> JS -> Tengo definido la variable en el data ---> data binding --> HTML
+
+1. EJERCICIO RAPIDO
+    - Cuando un item esta completado
+        -> Agregar la clase tachado al SPAN del item
+        -> Agregar el disabled en el boton completado y eliminar
