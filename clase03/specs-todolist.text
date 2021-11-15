@@ -1,0 +1,37 @@
+TODO LIST
+    - Funcionalidades
+        -> Agregar un item en la lista
+        -> Luego de agregar el item
+            -> Acciones
+                -> Eliminar item
+                -> Completar item
+
+- VIEW
+    -> input de texto, boton agregar
+    -> Lista UL, LI
+        -> Donde c/item va a tener un texto, boton completar, boton eliminar
+
+- LOGICA
+    -> Funcion de agregar texto a una lista
+    -> Funcion de marcar al item de la lista como completado
+        -> Utilizamos posicion del elemento
+    -> Funcion eliminar el item de la lista
+        -> Utilizamos posicion del elemento
+
+- INTEGRACION
+    -> Eventos
+        -> v-on:click de agregar item
+            -> v-model para obtener el texto del input
+        -> v-on:click de eliminar item
+        -> v-on:click de completar
+    -> v-for elementos de la lista
+    -> v-bind de la clase con el texto tachado cuando se completa un item
+    -> v-bind disabled cuando un item esta completado
+        -> Si completo un item de la lista, no lo puedo eliminar mas
+
+
+JS ---> { Data binding, directivas } ---> HTML
+JS <--- { directivas: v-model, v-on:evento } <--- HTML
+
+Recorrido: 
+HTML ---> v-model ---> JS -> Tengo definido la variable en el data ---> data binding --> HTML
