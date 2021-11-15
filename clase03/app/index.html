@@ -18,7 +18,7 @@
         <hr>
         <ul>
             <li v-for="(item, indice) in lista">
-                <span v-bind:class="{tachado: item.completado}">{{item.nombre}}</span>
+                <span v-bind:class="{ tachado: item.completado }">{{item.nombre}}</span>
                 <button v-on:click="completar(indice)" v-bind:disabled="item.completado">Completar</button>
                 <button v-on:click="eliminar(indice)" v-bind:disabled="item.completado">Eliminar</button>
             </li>
