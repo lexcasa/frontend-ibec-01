@@ -40,15 +40,15 @@ HTML ---> v-model ---> JS -> Tengo definido la variable en el data ---> data bin
     - Cuando un item esta completado
         -> Agregar la clase tachado al SPAN del item
         -> Agregar el disabled en el boton completado y eliminar
-        
+
 2. EJERCICIO RAPIDO
-    - Al completar un elemento agregar un contador en el pie de la to-do lista 
+    - [x] Al completar un elemento agregar un contador en el pie de la to-do lista 
     que indique cuantos elementos fueron completados
         "Completados: 2/10"
         - Donde "10" son los elementos de la lista
     - Agregar un boton "Restablecer"
         -> Donde al dar click va habilitar todos los elementos que estaban completados
         -> Esto influye en el contador de completados
-    - Al eliminar un elemento de la lista 
+    - [x] Al eliminar un elemento de la lista 
         -> Tambien influye en el contador de completados
     
