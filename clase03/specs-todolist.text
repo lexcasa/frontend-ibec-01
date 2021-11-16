@@ -46,9 +46,18 @@ HTML ---> v-model ---> JS -> Tengo definido la variable en el data ---> data bin
     que indique cuantos elementos fueron completados
         "Completados: 2/10"
         - Donde "10" son los elementos de la lista
-    - Agregar un boton "Restablecer"
+    - [x] Agregar un boton "Restablecer"
         -> Donde al dar click va habilitar todos los elementos que estaban completados
         -> Esto influye en el contador de completados
     - [x] Al eliminar un elemento de la lista 
         -> Tambien influye en el contador de completados
+
+3. EJERCICIO RAPIDO
+    - [x] Que aparezca el "Completados: X/Y" si existe por lo menos un item en la lista
+    - El boton "Restablecer" esta deshabilitado a menos que exista un elemento completado
+    - [x] Boton: "Completar todos"
+        -> Si estan todos completados que quede en disabled ese boton
+            -> Sea mediante la accion del mismo
+            -> O por completar uno a uno
+
     

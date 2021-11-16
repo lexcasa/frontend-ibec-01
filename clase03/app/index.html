@@ -23,8 +23,13 @@
                 <button v-on:click="eliminar(indice)" v-bind:disabled="item.completado">Eliminar</button>
             </li>
         </ul>
-        <hr>
-        <p>Completados: {{completados}}/{{total}}</p>
+        <div v-if="lista.length > 0">
+            <hr>
+            <p>Completados: {{completados}}/{{total}}</p>
+            <hr>
+            <button v-on:click="restablecer()">Restablecer</button>
+            <button v-on:click="completarTodos()" v-bind:disabled="compTodos">Completar todos</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
