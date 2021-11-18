@@ -1,13 +1,14 @@
-const app = new Vue({
-    el: '#app',
-    data: {
-        item: '',
-        lista: [],
-        flag: true,
-        total: 0,
-        completados: 0,
-        compTodos: false,
-        notRestablecer: true 
+const CompTodoList = Vue.component('todo-list', {
+    data: function (){
+        return {
+            item: '',
+            lista: [],
+            flag: true,
+            total: 0,
+            completados: 0,
+            compTodos: false,
+            notRestablecer: true
+        } 
     },
     methods: {
         agregar: function (){
@@ -68,5 +69,26 @@ const app = new Vue({
                 this.compTodos = true
             }
         }
-    }
+    },
+    template: `
+        <div id="todo-list">
+            <input type="text" v-model="item">
+            <button v-on:click="agregar()">Agregar</button>
+            <hr>
+            <ul>
+                <li v-for="(item, indice) in lista">
+                    <span v-bind:class="{ tachado: item.completado }">{{item.nombre}}</span>
+                    <button v-on:click="completar(indice)" v-bind:disabled="item.completado">Completar</button>
+                    <button v-on:click="eliminar(indice)" v-bind:disabled="item.completado">Eliminar</button>
+                </li>
+            </ul>
+            <div v-if="lista.length > 0">
+                <hr>
+                <p>Completados: {{completados}}/{{total}}</p>
+                <hr>
+                <button v-on:click="restablecer()" v-bind:disabled="notRestablecer">Restablecer</button>
+                <button v-on:click="completarTodos()" v-bind:disabled="compTodos">Completar todos</button>
+            </div>
+        </div>
+    `
 })
