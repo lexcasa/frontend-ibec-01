@@ -54,7 +54,13 @@ HTML ---> v-model ---> JS -> Tengo definido la variable en el data ---> data bin
 
 3. EJERCICIO RAPIDO
     - [x] Que aparezca el "Completados: X/Y" si existe por lo menos un item en la lista
-    - El boton "Restablecer" esta deshabilitado a menos que exista un elemento completado
+    - [] El boton "Restablecer" esta deshabilitado a menos que exista un elemento completado
+       
+        - CASOS DE PRUEBA
+            -> Al cargar la app el Restablecer debe estar inactivo
+            -> Si marco un elemento el boton Restablecer tiene que estar activo
+            -> Si marco todos los elementos el botn Restablecer tiene que estar activo
+
     - [x] Boton: "Completar todos"
         -> Si estan todos completados que quede en disabled ese boton
             -> Sea mediante la accion del mismo
