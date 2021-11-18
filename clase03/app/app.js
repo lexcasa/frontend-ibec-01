@@ -6,8 +6,7 @@ const app = new Vue({
         flag: true,
         total: 0,
         completados: 0,
-        compTodos: false,
-        notRestablecer: true 
+        compTodos: false
     },
     methods: {
         agregar: function (){
@@ -25,7 +24,7 @@ const app = new Vue({
         completar: function (indice){
             this.lista[indice].completado = true
             console.log("this.lista: ", this.lista)
-            this.notRestablecer = false
+        
             this.totalizar()
         },
         totalizar: function (){
@@ -45,13 +44,11 @@ const app = new Vue({
             this.lista.map( item => item.completado = false)
             this.compTodos = false
             this.completados = 0
-            this.notRestablecer = true
         },
         completarTodos: function (){
             this.lista.map( item => item.completado = true)
             this.compTodos = true
             this.completados = this.lista.length
-            this.notRestablecer = false
         },
         compTodosControl: function (){
             // Iniciamos siempre en false el boton de comp. todos
