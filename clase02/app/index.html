@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <!-- Incluir CDN de VueJS -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h2>{{titulo}}</h2>
+            <div>
+                <input type="text" v-model="cedula">
+                <button v-on:click="buscarPersona()">Buscar</button>
+            </div>
+            <hr>
+            <div v-if="showForm">
+                <form action="">
+                    <input type="text" placeholder="Nombre" v-model="newPersona.nombre">
+                    <br>
+                    <input type="text" placeholder="Cedula" v-model="newPersona.cedula">
+                    <br>
+                    <button type="button" v-on:click="nuevaPersona()">Guardar</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cedula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="persona in personas" :key="persona.cedula">
+                        <td>{{persona.nombre}}</td>
+                        <td>{{persona.cedula}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
