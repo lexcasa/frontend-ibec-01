@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .tachado {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="item">
+        <button v-on:click="agregar()">Agregar</button>
+        <hr>
+        <ul>
+            <li v-for="(item, indice) in lista">
+                <span v-bind:class="{ tachado: item.completado }">{{item.nombre}}</span>
+                <button v-on:click="completar(indice)" v-bind:disabled="item.completado">Completar</button>
+                <button v-on:click="eliminar(indice)" v-bind:disabled="item.completado">Eliminar</button>
+            </li>
+        </ul>
+        <div v-if="lista.length > 0">
+            <hr>
+            <p>Completados: {{completados}}/{{total}}</p>
+            <hr>
+            <button v-on:click="restablecer()" v-bind:disabled="notRestablecer">Restablecer</button>
+            <button v-on:click="completarTodos()" v-bind:disabled="compTodos">Completar todos</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

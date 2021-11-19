@@ -1,0 +1,70 @@
+TODO LIST
+    - Funcionalidades
+        -> Agregar un item en la lista
+        -> Luego de agregar el item
+            -> Acciones
+                -> Eliminar item
+                -> Completar item
+
+- VIEW
+    -> input de texto, boton agregar
+    -> Lista UL, LI
+        -> Donde c/item va a tener un texto, boton completar, boton eliminar
+
+- LOGICA
+    -> Funcion de agregar texto a una lista
+    -> Funcion de marcar al item de la lista como completado
+        -> Utilizamos posicion del elemento
+    -> Funcion eliminar el item de la lista
+        -> Utilizamos posicion del elemento
+
+- INTEGRACION
+    -> Eventos
+        -> v-on:click de agregar item
+            -> v-model para obtener el texto del input
+        -> v-on:click de eliminar item
+        -> v-on:click de completar
+    -> v-for elementos de la lista
+    -> v-bind de la clase con el texto tachado cuando se completa un item
+    -> v-bind disabled cuando un item esta completado
+        -> Si completo un item de la lista, no lo puedo eliminar mas
+
+
+JS ---> { Data binding, directivas } ---> HTML
+JS <--- { directivas: v-model, v-on:evento } <--- HTML
+
+Recorrido: 
+HTML ---> v-model ---> JS -> Tengo definido la variable en el data ---> data binding --> HTML
+
+1. EJERCICIO RAPIDO
+    - Cuando un item esta completado
+        -> Agregar la clase tachado al SPAN del item
+        -> Agregar el disabled en el boton completado y eliminar
+
+2. EJERCICIO RAPIDO
+    - [x] Al completar un elemento agregar un contador en el pie de la to-do lista 
+    que indique cuantos elementos fueron completados
+        "Completados: 2/10"
+        - Donde "10" son los elementos de la lista
+    - [x] Agregar un boton "Restablecer"
+        -> Donde al dar click va habilitar todos los elementos que estaban completados
+        -> Esto influye en el contador de completados
+    - [x] Al eliminar un elemento de la lista 
+        -> Tambien influye en el contador de completados
+
+3. EJERCICIO RAPIDO
+    - [x] Que aparezca el "Completados: X/Y" si existe por lo menos un item en la lista
+    - [] El boton "Restablecer" esta deshabilitado a menos que exista un elemento completado
+       
+        - CASOS DE PRUEBA
+            -> Al cargar la app el Restablecer debe estar inactivo
+            -> Si marco un elemento el boton Restablecer tiene que estar activo
+            -> Si marco todos los elementos el botn Restablecer tiene que estar activo
+
+    - [x] Boton: "Completar todos"
+        -> Si estan todos completados que quede en disabled ese boton
+            -> Sea mediante la accion del mismo
+            -> O por completar uno a uno
+
+    
+
