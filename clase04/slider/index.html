@@ -7,37 +7,35 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <style>
-        .tachado {
-            text-decoration: line-through;
-        }
-    </style>
-    <style>
-        #slider ul {
+        ul {
             display: flex;
             max-width: 200px;
             list-style: none;
             padding: 0;
             margin: 0 auto;
         }
-        #slider .img-container {
+        .img-container {
             text-align: center;
         }
-        #slider ul li {
+        ul li {
             flex: 1;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <h2>{{titulo}}</h2>
-        <slider></slider>
-        <!-- Invoco el componente dentro de la app nueva -->
-        <todo-list></todo-list>
-        <persona></persona>
+        <div class="img-container">
+            <img v-bind:src="imagenes[ image ]" alt="" width="200px">
+        </div>
+        <hr>
+        <ul>
+            <li><a href="#" v-on:click="moveIzq()"><</a></li>
+            <li v-for="(item, i) in imagenes">
+                <a href="#" v-on:click="moveTo(i)">{{i+1}}</a>
+            </li>
+            <li><a href="#" v-on:click="moveDer()">></a></li>
+        </ul>       
     </div>
-    <script src="components/todolist.component.js"></script>
-    <script src="components/persona.component.js"></script>
-    <script src="components/slider.component.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -15,4 +15,41 @@
         -> Funcionalidades
             1. Array de URL de fotos
             2. Donde al cargar la app aparece el primer elemento seleccionado
+               
+                EJEMPLO:
+                - Tengo un array: [foto1, foto2, fot3]
+                - Cargo el componente con foto1
+
+            3. Indicies que puedo seleccionar que foto mostrar
+                Indices: 1, 2, 3
+                    -> Si doy clic en el 1. Me muestra la foto1
+                    -> Si doy clic en el 2. Me muestra la foto2
+                    ...
+            4. Cursores (<, >)
+                Cursores: 
+                    -> Si doy clic al cursor izq me muevo a la foto de la izq
+                    -> Si doy clic al cursor der me muevo a la foto de la derecha
+                    -> Tener en cuenta en que posicion estoy
+
+                    EJEMPLOS: 
+
+                        Cursor < 
+                            Estoy en la foto1 -> se mueve -> foto3
+                            Estoy en la foto3 -> se mueve -> foto2
+                            Estoy en la foto2 -> se mueve -> foto1 
+                        
+                        Cursor > 
+                            Estoy en la foto3 -> se mueve -> foto1
+                            ...
+        
+        - VIEW
+            - Img, 
+            - ul, li, a: con los indices
+            - 2 a que van a ser los cursores
+
+             [ IMG1 ]
+            < 1,2,3 >
+            
+
+
     - Crear un componente sobre esa app
