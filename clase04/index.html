@@ -12,18 +12,34 @@
             text-decoration: line-through;
         }
     </style>
+    <style>
+        #slider ul {
+            display: flex;
+            max-width: 200px;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+        #slider .img-container {
+            text-align: center;
+        }
+        #slider ul li {
+            flex: 1;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
         <h2>{{titulo}}</h2>
-        <div id="comp--slider"></div>
+        <slider></slider>
         <!-- Invoco el componente dentro de la app nueva -->
         <todo-list></todo-list>
         <persona></persona>
     </div>
     <script src="components/todolist.component.js"></script>
     <script src="components/persona.component.js"></script>
+    <script src="components/slider.component.js"></script>
     <script src="app.js"></script>
 </body>
 

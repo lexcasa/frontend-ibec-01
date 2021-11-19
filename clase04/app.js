@@ -5,7 +5,8 @@ const app = new Vue({
     },
     components: {
         'todo-list': CompTodoList,
-        'persona': CompPersona
+        'persona': CompPersona,
+        'slider': CompSlider
     },
     methods: {
 
