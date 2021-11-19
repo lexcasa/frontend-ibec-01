@@ -11,6 +11,26 @@ const app = new Vue({
     methods: {
         moveTo: function (indice){
             this.image = indice
+        },
+        moveIzq: function (){
+            // ln: Largo del array
+            // El ultimo elemento ln-1
+            // Pos actual: image
+            if(this.image == 0){
+                this.image = this.imagenes.length -1
+            } else {
+                this.image = this.image -1
+            }
+        },
+        moveDer: function (){
+            // ln: Largo del array
+            // El ultimo elemento ln-1
+            // Pos actual: image
+            if(this.image == this.imagenes.length -1){
+                this.image = 0
+            } else {
+                this.image = this.image +1
+            }
         }
     }
 })
