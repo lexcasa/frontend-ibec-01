@@ -5,8 +5,7 @@ const app = new Vue({
         lista: [],
         flag: true,
         total: 0,
-        completados: 0,
-        compTodos: false
+        completados: 0
     },
     methods: {
         agregar: function (){
