@@ -47,10 +47,20 @@
                 -> Listado con los productos creados
 
     EJERCICIO RAPIDO 1
-    
+
         -> Un formulario con los campos del producto
             -> Nombre
             -> cantidad
             -> Precio
         -> Con un boton guardar
         -> Al guardar que hagamos un console.log del producto en el formulario
+    
+    EJERCICIO RAPIDO 2
+
+        -> Crear una tabla que lista los productos
+            -> _id
+            -> Nombre
+            -> Precio
+            -> Cantidad
+        -> Crear productos de ejemplo dentro del array de productos
+        -> Crear una funcion para obtener todos los productos de la API a traves de un GET
