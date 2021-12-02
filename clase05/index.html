@@ -15,6 +15,16 @@
             <button>Productos</button>
             <button>+Producto</button>
         </div>
+        <hr>
+        <form>
+            <input type="text" v-model="producto.nombre" placeholder="Nombre">
+            <br>
+            <input type="number" v-model="producto.cantidad" placeholder="Cantidad">
+            <br>
+            <input type="number" v-model="producto.precio" placeholder="Precio">
+            <br>
+            <button type="button" v-on:click="guardaProducto()">Guardar</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
