@@ -1,0 +1,55 @@
+- CRUD de Productos
+    -> Operaciones CRUD
+        -> Create
+        -> Read
+        -> Update
+        -> Delete
+
+        Modelo: 
+        Producto: {
+            nombre: String, 
+            precio: Float,
+            cantidad: Int
+        }
+    
+    - Interaccion con una API
+
+        [Base de datos] <-----> { [API] <-- HTTP --> [WebApp: FrontEnd] }
+        Std de datos -> JSON
+
+    - Como se relaciona el CRUD con HTTP
+
+        - Operaciones sobre un modelo dado
+            
+            -> Create
+            
+            [WebApp: Formulario] ---> HTTP (JSON) ---> [API] ---> [Base de datos]
+                {
+                    nombre:"Manzana",
+                    precio:200,
+                    cantidad:10
+                }
+
+        HTTP verbos
+            -> Create, POST
+            -> Read,   GET
+            -> Update, PUT
+            -> Delete, DELETE 
+
+        -> BaaS: Backend as a service
+            crudcrud.com
+        
+        -> Implementar un CRUD de productos en VUE
+            -> Como uso HTTP dentro de JS
+                -> Libreria axios para peticiones HTTP
+            -> VIEW
+                -> Formulario con los campos de un producto
+                -> Listado con los productos creados
+
+    EJERCICIO RAPIDO 1
+        -> Un formulario con los campos del producto
+            -> Nombre
+            -> cantidad
+            -> Precio
+        -> Con un boton guardar
+        -> Al guardar que hagamos un console.log del producto en el formulario
