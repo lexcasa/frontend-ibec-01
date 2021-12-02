@@ -47,6 +47,7 @@
                 -> Listado con los productos creados
 
     EJERCICIO RAPIDO 1
+    
         -> Un formulario con los campos del producto
             -> Nombre
             -> cantidad
