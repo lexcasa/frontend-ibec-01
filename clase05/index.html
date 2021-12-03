@@ -43,7 +43,7 @@
                         <td>{{prod.precio}}</td>
                         <td>{{prod.cantidad}}</td>
                         <td>
-                            <button>Seleccionar</button>
+                            <button v-on:click="seleccionarProducto(prod)">Seleccionar</button>
                             <button>Eliminar</button>
                         </td>
                     </tr>
