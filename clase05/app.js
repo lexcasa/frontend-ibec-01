@@ -24,8 +24,19 @@ const app = new Vue({
             axios.post(url, producto).then( res => {
                 // t=(i+1) + ts + ty
                 console.log("res: ", res)
+                this.cargaProductos()
             })
             console.log(this.producto)
+        },
+        cargaProductos: function (){
+            let url = API + '/productos'
+            axios.get(url).then( res => {
+                this.productos = res.data
+            })
         }
+    },
+    mounted: function (){
+        console.log("ready :: ")
+        this.cargaProductos()
     }
 })

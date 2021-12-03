@@ -64,3 +64,8 @@
             -> Cantidad
         -> Crear productos de ejemplo dentro del array de productos
         -> Crear una funcion para obtener todos los productos de la API a traves de un GET
+
+    1. Cuando creo un producto nuevo que me cargue la lista de producto automaticamente
+    2. Cuando entro en la web que me cargue la lista de productos
+
+    
