@@ -44,7 +44,7 @@
                         <td>{{prod.cantidad}}</td>
                         <td>
                             <button v-on:click="seleccionarProducto(prod)">Seleccionar</button>
-                            <button>Eliminar</button>
+                            <button v-on:click="eliminarProducto(prod._id)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>

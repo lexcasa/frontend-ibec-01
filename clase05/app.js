@@ -1,4 +1,4 @@
-const API = 'https://crudcrud.com/api/d82666a55a31472d97178bec6ea4796f'
+const API = 'https://crudcrud.com/api/3d7717844a4346ff99c056ca7453d307'
 const copy = function (item){
     return JSON.parse( JSON.stringify(item) )
 }
@@ -51,6 +51,12 @@ const app = new Vue({
         },
         seleccionarProducto: function (producto){
             this.producto = copy(producto)
+        },
+        eliminarProducto: function (id){
+            let url = API + '/productos/' + id
+            axios.delete(url).then( res => {
+                this.cargaProductos()
+            })
         }
     },
     mounted: function (){
