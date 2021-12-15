@@ -1,0 +1,78 @@
+- CRUD de Productos
+    -> Operaciones CRUD
+        -> Create
+        -> Read
+        -> Update
+        -> Delete
+
+        Modelo: 
+        Producto: {
+            nombre: String, 
+            precio: Float,
+            cantidad: Int
+        }
+    
+    - Interaccion con una API
+
+        [Base de datos] <-----> { [API] <-- HTTP --> [WebApp: FrontEnd] }
+        Std de datos -> JSON
+
+    - Como se relaciona el CRUD con HTTP
+
+        - Operaciones sobre un modelo dado
+            
+            -> Create
+            
+            [WebApp: Formulario] ---> HTTP (JSON) ---> [API] ---> [Base de datos]
+                {
+                    nombre:"Manzana",
+                    precio:200,
+                    cantidad:10
+                }
+
+        HTTP verbos
+            -> Create, POST
+            -> Read,   GET
+            -> Update, PUT
+            -> Delete, DELETE 
+
+        -> BaaS: Backend as a service
+            crudcrud.com
+        
+        -> Implementar un CRUD de productos en VUE
+            -> Como uso HTTP dentro de JS
+                -> Libreria axios para peticiones HTTP
+            -> VIEW
+                -> Formulario con los campos de un producto
+                -> Listado con los productos creados
+
+    EJERCICIO RAPIDO 1
+
+        -> Un formulario con los campos del producto
+            -> Nombre
+            -> cantidad
+            -> Precio
+        -> Con un boton guardar
+        -> Al guardar que hagamos un console.log del producto en el formulario
+    
+    EJERCICIO RAPIDO 2
+
+        -> Crear una tabla que lista los productos
+            -> _id
+            -> Nombre
+            -> Precio
+            -> Cantidad
+        -> Crear productos de ejemplo dentro del array de productos
+        -> Crear una funcion para obtener todos los productos de la API a traves de un GET
+
+    1. Cuando creo un producto nuevo que me cargue la lista de producto automaticamente
+    2. Cuando entro en la web que me cargue la lista de productos
+
+    EJERCICIO RAPIDO 3
+
+        -> Al dar clic en "Seleccionar" que cargue los datos del item en el formulario
+        -> Verificar en el momento de guardar si el producto tiene el campo: "_id"
+        -> En el caso que contenga el campo "_id" entonces actualizamos el producto
+            -> El update del producto se hace con: PUT api.com/productos/61a9584797069d03e8491451
+            {nombre:"asdsa",precio:12,cantidad:12}
+            -> No va el campo: "_id"
