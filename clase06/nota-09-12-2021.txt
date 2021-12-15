@@ -1,0 +1,7 @@
+EJERCICIO RAPIDO 1
+    - Crear un componente de la todo-list
+    - Agregar en una app de Vue
+
+EJERCICIO RAPIDO 2
+    - Crear un componente del CRUD productos de clase 05
+    - Para testear agregar el componente en una app de Vue
