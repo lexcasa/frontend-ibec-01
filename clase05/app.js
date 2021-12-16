@@ -1,4 +1,4 @@
-const API = 'https://crudcrud.com/api/3d7717844a4346ff99c056ca7453d307'
+const API = 'https://crudcrud.com/api/70da43e155a140eab14095701e3cccc0'
 const copy = function (item){
     return JSON.parse( JSON.stringify(item) )
 }
@@ -17,7 +17,7 @@ const app = new Vue({
         // t=i
         guardaProducto: function (){
             // t=i+1
-            let url = API + '/productos'
+            let url = API + '/productos' // /pepe
             let producto = this.producto
             // Hago una peticion de tipo POST 
             // A la API url.com/productos
@@ -28,12 +28,20 @@ const app = new Vue({
                 axios.post(url, producto).then( res => {
                     // t=(i+1) + ts + ty
                     console.log("res: ", res)
+                    this.producto =  {
+                        nombre: '',
+                        precio: 0,
+                        cantidad: 1
+                    }
                     this.cargaProductos()
                 })
             } else {
 
-                url += '/' + producto._id
-                delete producto._id
+                url += '/' + producto._id // url + '/' + producto._id -> api.com/productos/asd12321asd123
+               
+                // Objeto anterior: {nombre, precio, cantidad, _id}
+                delete producto._id 
+                // Objeto ahora: {nombre, precio, cantidad}
                 
                 axios.put(url, producto).then( res => {
                     // t=(i+1) + ts + ty
@@ -50,7 +58,8 @@ const app = new Vue({
             })
         },
         seleccionarProducto: function (producto){
-            this.producto = copy(producto)
+           this.producto = copy(producto)
+        //    this.producto = producto
         },
         eliminarProducto: function (id){
             let url = API + '/productos/' + id

@@ -1,0 +1,30 @@
+- Componente VueRouter
+    -> Ruteo de una webapp
+    -> Se llaman SPA
+        -> Single page application
+    
+    index.html
+        -> Cargan estados
+            -> Estado A
+                -> (path, componente)
+            -> Estado B
+            ...
+
+    WebApp
+        -> Login
+        -> Dashboard
+
+    webapp.com/
+        -> Login: (path: /, component: Login)
+        -> Dashboard: (path: /dashboard, component: Dashboard)
+
+        webapp.com/dashboard
+            -> Todo el contenido asociado al Dashboard
+        
+        webapp.com/
+            -> Todo el contenido asociado al Login
+
+    EJERCICIO RAPIDO 1
+
+        -> Setup de VueRouter y hacer funcionar local
+        -> Crear un componente nuevo: todo list y adherir a un estado
