@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <!-- Llamo los componentes -->
+    <!-- Cargo el menu de la carpeta del componente -->
+    <script src="./menu/menu.component.js"></script>
+    <script src="./productos/productos.component.js"></script>
+    
+    <script src="login.component.js"></script>
+    <script src="dashboard.component.js"></script>
+    <script src="todolist.component.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
