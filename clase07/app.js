@@ -1,7 +1,8 @@
 // Definir los estados de mi aplicacion
 const rutas = [
     {path: '/', component: CompLogin},
-    {path: '/dashboard', component: CompDashboard}
+    {path: '/dashboard', component: CompDashboard},
+    {path: '/todo', component: CompToDo}
 ]
 
 const router = new VueRouter({
@@ -10,5 +11,8 @@ const router = new VueRouter({
 
 const app = new Vue({
     router: router,
-    data: {}
+    data: {},
+    components: {
+        'menu-items': CompMenu
+    }
 }).$mount('#app')
