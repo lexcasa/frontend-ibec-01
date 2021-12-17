@@ -1,7 +1,8 @@
 // Definir los estados de mi aplicacion
 const rutas = [
     {path: '/', component: CompLogin},
-    {path: '/dashboard', component: CompDashboard}
+    {path: '/dashboard', component: CompDashboard},
+    {path: '/todo', component: CompToDo}
 ]
 
 const router = new VueRouter({

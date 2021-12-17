@@ -28,3 +28,8 @@
 
         -> Setup de VueRouter y hacer funcionar local
         -> Crear un componente nuevo: todo list y adherir a un estado
+
+    EJERCICIO RAPIDO 2
+
+        -> Crear un componente que tenga la lista de links a partir de un array
+        
