@@ -11,5 +11,8 @@ const router = new VueRouter({
 
 const app = new Vue({
     router: router,
-    data: {}
+    data: {},
+    components: {
+        'menu-items': CompMenu
+    }
 }).$mount('#app')
