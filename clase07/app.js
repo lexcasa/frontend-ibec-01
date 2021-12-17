@@ -2,7 +2,8 @@
 const rutas = [
     {path: '/', component: CompLogin},
     {path: '/dashboard', component: CompDashboard},
-    {path: '/todo', component: CompToDo}
+    {path: '/todo', component: CompToDo},
+    {path: '/productos', component: CompProductos}
 ]
 
 const router = new VueRouter({

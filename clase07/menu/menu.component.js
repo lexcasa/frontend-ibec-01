@@ -10,7 +10,8 @@ const CompMenu = Vue.component('menu', function (cb) {
                     links: [
                         {path: '/', name: 'Login'},
                         {path: '/dashboard', name: 'Dashboard'},
-                        {path: '/todo', name: 'Todo List'}
+                        {path: '/todo', name: 'Todo List'},
+                        {path: '/productos', name: 'Productos'}
                     ]
                 }
             },
