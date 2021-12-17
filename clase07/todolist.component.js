@@ -10,6 +10,9 @@ const CompToDo = Vue.component('todo-list', {
             notRestablecer: true
         }
     },
+    components: {
+        'menu-items': CompMenu
+    },
     methods: {
         agregar: function (){
             this.lista.push({nombre: this.item, completado: false})
@@ -72,6 +75,7 @@ const CompToDo = Vue.component('todo-list', {
     },
     template: `
     <div id="todo--list">
+        <menu-items></menu-items>
         <input type="text" v-model="item">
         <button v-on:click="agregar()">Agregar</button>
         <hr>
