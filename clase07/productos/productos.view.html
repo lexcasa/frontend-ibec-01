@@ -1,0 +1,43 @@
+<div id="productos--component">
+    <menu-items></menu-items>
+    <h2>{{titulo}}</h2>
+    <div>
+        <button v-on:click="cargaProductos()">Productos</button>
+        <button>+Producto</button>
+    </div>
+    <hr>
+    <form>
+        <input type="text" v-model="producto.nombre" placeholder="Nombre">
+        <br>
+        <input type="number" v-model="producto.cantidad" placeholder="Cantidad">
+        <br>
+        <input type="number" v-model="producto.precio" placeholder="Precio">
+        <br>
+        <button type="button" v-on:click="guardaProducto()" v-bind:disabled="producto.nombre == ''">Guardar</button>
+    </form>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="prod in productos">
+                    <td>{{prod._id}}</td>
+                    <td>{{prod.nombre}}</td>
+                    <td>{{prod.precio}}</td>
+                    <td>{{prod.cantidad}}</td>
+                    <td>
+                        <button v-on:click="seleccionarProducto(prod)">Seleccionar</button>
+                        <button v-on:click="eliminarProducto(prod._id)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
